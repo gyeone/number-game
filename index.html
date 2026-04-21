@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>숫자퀴즈</title>
+    </head>
+    <body>
+        <h2 id="title">숫자 퀴즈</h2>
+        <h3 id="ex">
+            1부터 100까지 중 랜덤한 숫자를 <strong>UP & DOWN</strong> 힌트를
+            이용해 맞춰보세요!
+        </h3>
+        <div class="start">
+            <input
+                id="inputNum"
+                type="text"
+                maxlength="3"
+                placeholder="숫자를 입력하세요"
+            />
+            <button id="btn" onclick="isNum()">실행</button>
+        </div>
+        <div class="hearts">
+            <span id="heart">♥️</span><span id="heart">♥️</span
+            ><span id="heart">♥️</span>
+        </div>
+        <h3 id="result"></h3>
+        <button class="sr-only" id="replay">다시 도전!</button>
+    </body>
+    <script src="./random.js"></script>
+</html>

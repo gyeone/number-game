@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "NexonMaplestory";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff")
+        format("woff");
+    font-weight: 300;
+    font-display: swap;
+}
+
+body {
+    font-family: "NexonMaplestory";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #404040;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+#title {
+    margin-top: 20vh;
+    font-size: 36px;
+}
+
+#ex {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#inputNum {
+    font-family: "NexonMaplestory";
+    margin: 20px 0;
+    border-radius: 16px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 220px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#btn,
+#replay {
+    font-family: "NexonMaplestory";
+    border-radius: 16px;
+    width: 80px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    box-shadow:
+        rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    background-color: lightblue;
+}
+
+#btn:active {
+    box-shadow:
+        rgb(204, 219, 232) 3px 3px 6px 0px inset,
+        rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+#heart {
+    font-size: 24px;
+}
+
+#result {
+    margin: 30px;
+    font-size: 22px;
+}
+
+#replay {
+    width: 120px;
+}
