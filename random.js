@@ -35,18 +35,18 @@ function random(num) {
 }
 
 function isNum() {
-    const $inputNum = document.querySelector("#inputNum").value;
+    const $inputNum = document.querySelector("#inputNum").value.trim();
 
     if (
-        (typeof ($inputNum.trim() + 0) !== "number" &&
-            $inputNum.trim() < 1 &&
-            $inputNum.trim() > 100) ||
-        $inputNum.trim() === ""
+        isNaN(+$inputNum) ||
+        +$inputNum < 1 ||
+        +$inputNum > 100 ||
+        $inputNum === ""
     ) {
         return alert("1부터 100까지의 숫자를 입력하세요");
     }
-    console.log($inputNum);
-    let num = +$inputNum.trim();
+
+    let num = +$inputNum;
 
     random(num);
 }
