@@ -30,8 +30,6 @@ function levelSelect(level) {
 
     $level_container.classList.add("sr-only");
     $quiz.classList.remove("sr-only");
-    console.log(maxNum);
-    console.log(randomNum);
 }
 
 function random(num) {
