@@ -8,25 +8,32 @@
     </head>
     <body>
         <h2 id="title">숫자 퀴즈</h2>
-        <h3 id="ex">
-            1부터 100까지 중 랜덤한 숫자를 <strong>UP & DOWN</strong> 힌트를
-            이용해 맞춰보세요!
-        </h3>
-        <div class="start">
-            <input
-                id="inputNum"
-                type="text"
-                maxlength="3"
-                placeholder="숫자를 입력하세요"
-            />
-            <button id="btn" onclick="isNum()">실행</button>
+        <h3 id="ex">난이도를 선택하세요</h3>
+        <div class="level-container">
+            <h3 id="level">난이도</h3>
+            <ul class="level-step">
+                <li><button onclick="levelSelect(3)">상</button></li>
+                <li><button onclick="levelSelect(2)">중</button></li>
+                <li><button onclick="levelSelect(1)">하</button></li>
+            </ul>
         </div>
-        <div class="hearts">
-            <span id="heart">♥️</span><span id="heart">♥️</span
-            ><span id="heart">♥️</span>
+        <div class="quiz sr-only">
+            <div class="hearts">
+                <span id="heart">♥️</span><span id="heart">♥️</span
+                ><span id="heart">♥️</span>
+            </div>
+            <div class="start">
+                <input
+                    id="inputNum"
+                    type="text"
+                    maxlength="3"
+                    placeholder="숫자를 입력하세요"
+                />
+                <button id="btn" onclick="isNum()">실행</button>
+            </div>
+            <h3 id="result"></h3>
+            <button class="sr-only" id="replay">다시 도전!</button>
         </div>
-        <h3 id="result"></h3>
-        <button class="sr-only" id="replay">다시 도전!</button>
     </body>
     <script src="./random.js"></script>
 </html>

@@ -1,15 +1,38 @@
+const $ex = document.querySelector("#ex");
+const $level_container = document.querySelector(".level-container");
+const $quiz = document.querySelector(".quiz");
 const $btn = document.querySelector("#btn");
 const $result = document.querySelector("#result");
 const $hearts = document.querySelectorAll("#heart");
 const $replay = document.querySelector("#replay");
 
 let count = 3;
-let randomNum = Math.floor(Math.random() * 100) + 1;
-console.log(randomNum);
+let randomNum;
 
 $replay.addEventListener("click", () => {
     location.reload();
 });
+
+function levelSelect(level) {
+    let maxNum;
+
+    switch (level) {
+        case 2:
+            maxNum = 50;
+            break;
+        case 3:
+            maxNum = 100;
+            break;
+    }
+    randomNum = Math.floor(Math.random() * maxNum) + 1;
+
+    $ex.innerHTML = `1부터 ${maxNum}까지 중 랜덤한 숫자를 <strong>UP & DOWN</strong> 힌트를 이용해 맞춰보세요!`;
+
+    $level_container.classList.add("sr-only");
+    $quiz.classList.remove("sr-only");
+    console.log(maxNum);
+    console.log(randomNum);
+}
 
 function random(num) {
     count--;

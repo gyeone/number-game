@@ -27,6 +27,33 @@ body {
     clip: rect(0 0 0 0);
 }
 
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    font-family: "NexonMaplestory";
+    border-radius: 16px;
+    width: 80px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    box-shadow:
+        rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    background-color: white;
+}
+
 #title {
     margin-top: 20vh;
     font-size: 36px;
@@ -37,9 +64,21 @@ body {
     font-weight: 500;
 }
 
-.start {
+.level-container {
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.level-step {
     display: flex;
-    align-items: center;
+    gap: 20px;
+}
+
+.quiz {
+    flex-direction: column;
+}
+
+.start {
     gap: 16px;
 }
 
@@ -55,24 +94,15 @@ body {
     text-align: center;
 }
 
-#btn,
-#replay {
-    font-family: "NexonMaplestory";
-    border-radius: 16px;
-    width: 80px;
-    height: 50px;
-    font-size: 18px;
-    border: none;
-    box-shadow:
-        rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-    background-color: white;
-}
-
 #btn:active {
     box-shadow:
         rgb(204, 219, 232) 3px 3px 6px 0px inset,
         rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.hearts {
+    margin: 10px 0;
+    gap: 8px;
 }
 
 #heart {
