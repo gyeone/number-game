@@ -17,6 +17,9 @@ function levelSelect(level) {
     let maxNum;
 
     switch (level) {
+        case 1:
+            maxNum = 10;
+            break;
         case 2:
             maxNum = 50;
             break;
