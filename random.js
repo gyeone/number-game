@@ -8,14 +8,13 @@ const $replay = document.querySelector("#replay");
 
 let count = 3;
 let randomNum;
+let maxNum;
 
 $replay.addEventListener("click", () => {
     location.reload();
 });
 
 function levelSelect(level) {
-    let maxNum;
-
     switch (level) {
         case 1:
             maxNum = 10;
@@ -60,15 +59,13 @@ function random(num) {
 
 function isNum() {
     const $inputNum = document.querySelector("#inputNum").value.trim();
-
     if (
         isNaN(+$inputNum) ||
         +$inputNum < 1 ||
-        +$inputNum > 100 ||
+        +$inputNum > maxNum ||
         $inputNum === ""
-    ) {
-        return alert("1부터 100까지의 숫자를 입력하세요");
-    }
+    )
+        return alert(`1부터 ${maxNum}까지의 숫자를 입력하세요`);
 
     let num = +$inputNum;
 
